@@ -6,8 +6,8 @@
 
 ## MacOS 환경설정
 
-* [MacOS VLSI 개발환경 구축](macos/macos_vlsi/README.md)
-* [Yosys + SKY130 합성 환경](macos/macos_vlsi/yosys_synth.md)
+* [MacOS VLSI 개발환경 구축](macos/vlsi/README.md)
+* [Yosys + SKY130 합성 환경](macos/vlsi/yosys_synth.md)
 
 ## Ubuntu 환경설정
 

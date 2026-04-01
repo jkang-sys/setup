@@ -132,6 +132,34 @@ ssh -T git@github.com
 ```
 > "Hi [사용자명]! You've successfully authenticated..." 라는 메시지가 나오면 성공입니다!
 
+
+### 4-1. SSH 443 포트 사용시
+
+#### 1회 테스트
+
+```bash
+ssh -T -p 443 git@ssh.github.com
+```
+
+#### 필요시
+
+```bash
+GIT_SSH_COMMAND='ssh -p 443' git clone git@github.com:OWNER/REPO.git
+```
+
+### 4-2. SSH 443 포트 사용 예시
+
+```bash
+cd ~/work
+git init
+git remote add origin git@github.com:OWNER/REPO.git
+
+git add .
+git commit -m "Initial commit"
+
+GIT_SSH_COMMAND='ssh -p 443' git push -u origin HEAD
+```
+
 ---
 
 ### 💡 주의사항: SSH 주소 사용하기
@@ -141,4 +169,8 @@ SSH 키를 등록했다면, 앞으로 원격 저장소를 연결할 때 `HTTPS` 
     ```bash
     git remote set-url origin git@github.com:계정명/저장소명.git
     ```
+
+
+
+
 
